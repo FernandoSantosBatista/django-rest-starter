@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path(("login/", include('knox.urls'))
+    path('login/', include('knox.urls')),  # Correção aqui
 ]
