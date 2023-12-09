@@ -13,11 +13,28 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.urls import path
 from knox import views as knox_views
+
+from app.views import LoginView
+
+urlpatterns = [
+     path(r'login/', LoginView.as_view(), name='knox_login'),
+     path(r'logout/', knox_views.LogoutView.as_view(), name='knox_logout'),
+     path(r'logoutall/', knox_views.LogoutAllView.as_view(), name='knox_logoutall'),
+]
+
+"""
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from knox import views as knox_views
+
+from app.views import LoginView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('login/', include('knox.urls')),  # Correção aqui
+     path(r'login/', LoginView.as_view(), name='knox_login'),
+     path(r'logout/', knox_views.LogoutView.as_view(), name='knox_logout'),
+     path(r'logoutall/', knox_views.LogoutAllView.as_view(), name='knox_logoutall'),
 ]
+"""
