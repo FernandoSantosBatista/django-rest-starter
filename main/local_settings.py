@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "knox",
+    "products",
+    "app"
 ]
 
 
@@ -100,9 +102,9 @@ DATABASES = {
 }
 
 
-
+"""
 # Database SQLITE
-""""
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
