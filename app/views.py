@@ -7,7 +7,6 @@ from app.serializers import UserSerializer
 
 
 class CreateUserView(generics.CreateAPIView):
-    # Create user API view
     serializer_class = UserSerializer
 
 class LoginView(KnoxLoginView):

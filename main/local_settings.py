@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "knox",
-    "products",
     "app"
 ]
 
@@ -131,7 +130,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+CORS_ALLOW_ALL_ORIGINS = True
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
