@@ -124,7 +124,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-
+CORS_ALLOW_ALL_ORIGINS = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
